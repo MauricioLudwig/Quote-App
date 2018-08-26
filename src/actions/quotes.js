@@ -23,7 +23,7 @@ export const startGetQOTD = () => {
                     body
                 }));
             }).catch(e => {
-                console.log(e);
+                alert(e);
             });
 
     };

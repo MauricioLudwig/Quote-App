@@ -18,6 +18,7 @@ class QOTD extends Component {
             <div>
                 <h1 className="quote_body">"{this.props.qotd.body}"</h1>
                 <p className="quote_author">{this.props.qotd.author}</p>
+                <button onClick={this.refreshQuote}>Refresh</button>
             </div>
         );
     }

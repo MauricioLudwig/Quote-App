@@ -9,10 +9,10 @@
 }
 
 .home-page-box {
-  background: white;
-  opacity: 0.7;
-  border-radius: 10px;
-  width: 30rem;
+  background: #F8F8F8;
+  opacity: 0.65;
+  border-radius: 5px;
+  width: 25rem;
   text-align: center;
   padding: 3rem;
   margin: 1rem;
