@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import QOTD from './components/QOTD';
+import QOTD from './components/QOTD/QOTD';
 
 class App extends Component {
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './QOTD.css';
 
-import { startGetQOTD } from '../actions/quotes';
+import { startGetQOTD } from '../../actions/quotes';
 
 class QOTD extends Component {
 
@@ -18,7 +19,7 @@ class QOTD extends Component {
             <div>
                 <h1 className="quote_body">"{this.props.qotd.body}"</h1>
                 <p className="quote_author">{this.props.qotd.author}</p>
-                <button onClick={this.refreshQuote}>Refresh</button>
+                <button className="refresh_quote_btn" onClick={this.refreshQuote}>Another!</button>
             </div>
         );
     }
