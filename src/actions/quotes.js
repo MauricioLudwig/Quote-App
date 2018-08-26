@@ -1,24 +1,20 @@
-import { GET_QOTD, GET_QUOTES } from './actionTypes';
+import { GET_QOTD } from './actionTypes';
 import axios from 'axios';
 
-const BASE_URI = 'https://favqs.com/api/';
-const QOTD_URI = 'qotd';
-const QUOTES_URI = 'quotes';
+const uri = {
+    base: 'https://favqs.com/api/',
+    qotd: 'qotd'
+};
 
-const getQOTD = quote => ({
+export const getQOTD = qotd => ({
     type: GET_QOTD,
-    quote
-});
-
-const getQuotes = quotes => ({
-    type: GET_QUOTES,
-    quotes
+    qotd
 });
 
 export const startGetQOTD = () => {
     return (dispatch) => {
 
-        axios.get(BASE_URI + QOTD_URI)
+        axios.get(uri.base + uri.qotd)
             .then(res => {
                 const { id, author, body } = res.data.quote;
                 dispatch(getQOTD({

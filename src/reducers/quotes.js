@@ -1,8 +1,7 @@
 import { GET_QOTD } from '../actions/actionTypes';
 
 const initialState = {
-    qotd: {},
-    quotes: []
+    qotd: {}
 };
 
 const quotesReducer = (state = initialState, action) => {
@@ -11,8 +10,7 @@ const quotesReducer = (state = initialState, action) => {
         case GET_QOTD:
             return {
                 ...state,
-                qotd: action.quote
-
+                qotd: action.qotd
             }
         default:
             return state;

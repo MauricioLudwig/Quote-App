@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import { startGetQOTD } from '../actions/quotes';
 
 class QOTD extends Component {
 
     componentDidMount() {
+        this.refreshQuote();
+    }
+
+    refreshQuote = () => {
         this.props.getQOTD();
     }
 
     render() {
-
-        console.log(this.props.qotd);
-
         return (
-            <div>Hello</div>
+            <div>
+                <h1 className="quote_body">"{this.props.qotd.body}"</h1>
+                <p className="quote_author">{this.props.qotd.author}</p>
+            </div>
         );
     }
 

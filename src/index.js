@@ -14,6 +14,4 @@ const app = (
     </Provider>
 );
 
-console.log(store.getState());
-
 ReactDOM.render(app, document.getElementById('root'));
