@@ -8,7 +8,7 @@ class QOTD extends Component {
         return (
             <div>
                 <h1 className="quote_body">"{this.props.qotd.body}"</h1>
-                <p className="quote_author">{this.props.qotd.author}</p>
+                <p className="quote_author">- {this.props.qotd.author}</p>
             </div>
         );
     }
