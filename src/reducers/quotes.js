@@ -1,16 +1,24 @@
-import { GET_QOTD } from '../actions/actionTypes';
+import { GET_QOTD, SET_LOADER } from '../actions/actionTypes';
 
 const initialState = {
-    qotd: {}
+    qotd: {},
+    loading: true
 };
 
 const quotesReducer = (state = initialState, action) => {
 
+    console.log(state, action);
+
     switch (action.type) {
         case GET_QOTD:
             return {
+                qotd: action.qotd,
+                loading: false
+            }
+        case SET_LOADER:
+            return {
                 ...state,
-                qotd: action.qotd
+                loading: true
             }
         default:
             return state;

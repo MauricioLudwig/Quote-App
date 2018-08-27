@@ -1,4 +1,4 @@
-import { GET_QOTD } from './actionTypes';
+import { GET_QOTD, SET_LOADER } from './actionTypes';
 import axios from 'axios';
 
 const uri = {
@@ -11,8 +11,15 @@ export const getQOTD = qotd => ({
     qotd
 });
 
+export const setLoader = () => ({
+    type: SET_LOADER
+});
+
 export const startGetQOTD = () => {
+
     return (dispatch) => {
+
+        setLoader();
 
         axios.get(uri.base + uri.qotd)
             .then(res => {

@@ -5,3 +5,9 @@ body {
   padding: 0;
   font-family: "Lato", sans-serif;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
