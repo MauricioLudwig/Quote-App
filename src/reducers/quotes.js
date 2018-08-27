@@ -7,8 +7,6 @@ const initialState = {
 
 const quotesReducer = (state = initialState, action) => {
 
-    console.log(state, action);
-
     switch (action.type) {
         case GET_QOTD:
             return {
