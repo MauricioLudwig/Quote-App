@@ -17,7 +17,6 @@ class App extends Component {
     this.props.getQOTD();
   }
 
-
   render() {
     return (
       <div className="home-page-layout">
@@ -27,7 +26,7 @@ class App extends Component {
             : (
               <div>
                 <QOTD />
-                <button className="refresh_quote_btn" onClick={this.refreshQuote}>Another!</button>
+                <button className="refresh_quote_btn" onClick={this.refreshQuote}>Another One!</button>
               </div>
             )}
         </div>

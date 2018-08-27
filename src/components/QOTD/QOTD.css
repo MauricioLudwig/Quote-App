@@ -8,6 +8,17 @@
 }
 
 .refresh_quote_btn {
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-weight: 300;
+    background: #212e44;
+    color: white;
+    border: 1px solid lightblue;
+    font-size: 1.1rem;
+}
+
+.refresh_quote_btn:hover {
+    background: #131b28;
+    cursor: pointer;
+    border: 1px solid lightskyblue;
 }
