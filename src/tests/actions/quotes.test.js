@@ -1,4 +1,4 @@
-import { GET_QOTD } from '../../actions/actionTypes';
+import { GET_QOTD_SUCCESS } from '../../actions/actionTypes';
 import { getQOTD } from '../../actions/quotes';
 
 test('should setup get quote of the day action object', () => {
@@ -12,7 +12,7 @@ test('should setup get quote of the day action object', () => {
     const action = getQOTD(quote);
 
     expect(action).toEqual({
-        GET_QOTD,
+        GET_QOTD_SUCCESS,
         quote
     });
 

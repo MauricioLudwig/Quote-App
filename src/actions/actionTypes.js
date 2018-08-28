@@ -1,2 +1,2 @@
-export const GET_QOTD = 'GET_QOTD';
-export const SET_LOADER = 'SET_LOADER';
+export const GET_QOTD_REQUEST = 'GET_QOTD_REQUEST';
+export const GET_QOTD_SUCCESS = 'GET_QOTD_SUCCESS';
