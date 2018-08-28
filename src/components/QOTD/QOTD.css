@@ -3,22 +3,22 @@
 }
 
 .quote_author {
-    font-style: italic;
     color: rgb(78, 65, 150);
 }
 
 .refresh_quote_btn {
+    border-radius: 5px;
     margin-top: 1rem;
     padding: 1rem 2rem;
     font-weight: 300;
-    background: #212e44;
+    background: #1e2b41;
     color: white;
     border: 1px solid lightblue;
     font-size: 1.1rem;
 }
 
 .refresh_quote_btn:hover {
-    background: #131b28;
+    background: #0c121b;
     cursor: pointer;
     border: 1px solid lightskyblue;
 }

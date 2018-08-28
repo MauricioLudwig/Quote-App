@@ -26,7 +26,7 @@ class App extends Component {
             : (
               <div>
                 <QOTD />
-                <button className="refresh_quote_btn" onClick={this.refreshQuote}>Another One!</button>
+                <button className="refresh_quote_btn" onClick={this.refreshQuote}>Unun plus</button>
               </div>
             )}
         </div>
