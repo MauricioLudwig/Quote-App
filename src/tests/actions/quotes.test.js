@@ -1,5 +1,5 @@
-import { GET_QOTD_SUCCESS } from '../../actions/actionTypes';
-import { getQOTD } from '../../actions/quotes';
+import { GET_QOTD_SUCCESS, GET_QOTD_REQUEST } from '../../actions/actionTypes';
+import { getQOTD, setLoader } from '../../actions/quotes';
 
 test('should setup get quote of the day action object', () => {
 
@@ -12,8 +12,17 @@ test('should setup get quote of the day action object', () => {
     const action = getQOTD(quote);
 
     expect(action).toEqual({
-        GET_QOTD_SUCCESS,
-        quote
+        type: GET_QOTD_SUCCESS,
+        qotd: quote
+    });
+
+});
+
+test('should setup set loader action object', () => {
+
+    const action = setLoader();
+    expect(action).toEqual({
+        type: GET_QOTD_REQUEST
     });
 
 });
