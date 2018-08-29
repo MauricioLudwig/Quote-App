@@ -1,4 +1,4 @@
-import { GET_QOTD_REQUEST, GET_QOTD_SUCCESS } from './actionTypes';
+import { GET_QOTD_REQUEST, GET_QOTD_SUCCESS, GET_QOTD_ERROR } from './actionTypes';
 import axios from 'axios';
 
 const uri = {
@@ -13,6 +13,10 @@ export const setLoader = () => ({
 export const getQOTD = qotd => ({
     type: GET_QOTD_SUCCESS,
     qotd
+});
+
+export const setError = () => ({
+    type: GET_QOTD_ERROR
 });
 
 export const startGetQOTD = () => {
@@ -30,7 +34,7 @@ export const startGetQOTD = () => {
                     body
                 }));
             }).catch(e => {
-                alert(e);
+                dispatch(setError());
             });
 
     };

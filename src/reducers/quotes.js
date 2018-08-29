@@ -1,8 +1,9 @@
-import { GET_QOTD_REQUEST, GET_QOTD_SUCCESS } from '../actions/actionTypes';
+import { GET_QOTD_REQUEST, GET_QOTD_SUCCESS, GET_QOTD_ERROR } from '../actions/actionTypes';
 
 const initialState = {
     qotd: {},
-    loading: true
+    loading: true,
+    error: false
 };
 
 const quotesReducer = (state = initialState, action) => {
@@ -16,7 +17,13 @@ const quotesReducer = (state = initialState, action) => {
         case GET_QOTD_REQUEST:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                error: false
+            }
+        case GET_QOTD_ERROR:
+            return {
+                ...state,
+                error: true
             }
         default:
             return state;

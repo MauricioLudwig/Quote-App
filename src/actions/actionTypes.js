@@ -1,2 +1,3 @@
 export const GET_QOTD_REQUEST = 'GET_QOTD_REQUEST';
 export const GET_QOTD_SUCCESS = 'GET_QOTD_SUCCESS';
+export const GET_QOTD_ERROR = 'GET_QOTD_ERROR';
